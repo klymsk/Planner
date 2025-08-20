@@ -7,6 +7,7 @@
     --black-color: black;
     --white-color: white;
     --red-color: #D23B3B;
+    --gray-color: #181818;
     --font-family: "Unbounded";
     --font-weight-black: 800;
     --font-weight-medium: 400;
@@ -15,8 +16,9 @@
 body {
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
     background-color: var(--black-color);
-    padding: 1rem 2rem;
+    padding: 2.5rem 2rem;
 }
 
 header {
@@ -34,7 +36,9 @@ h1 {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    gap: 0.75rem;
+    position: fixed;
+    bottom: 1rem;
 }
 
 nav button {
@@ -43,13 +47,13 @@ nav button {
     border-radius: 20px;
     background-color: var(--red-color);
     border: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
 }
 
 .date {
@@ -70,4 +74,66 @@ main {
     font-weight: 200;
     font-size: 0.5rem;
     color: var(--white-color);
+}
+
+.tasksList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.mainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+}
+
+.taskHeader {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--white-color);
+    opacity: 0.8;
+}
+
+.detailInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+.detailInfo button {
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 0.4rem;
+    color: var(--white-color);
+    padding: 0.25rem 0.5rem;
+    opacity: 0.8;
+}
+
+.timeInfo {
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 0.5rem;
+    color: var(--white-color);
+}
+
+hr {
+    height: 0.1rem;
+    border-radius: 20px;
+    background-color: var(--white-color);
 }
